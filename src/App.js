@@ -1,8 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Note from "./components/Note";
-import notes  from "./components/notes";
 import CreateArea from "./components/CreateArea";
 
 function App() {
@@ -27,8 +26,8 @@ function App() {
         <Header />
         <CreateArea onAdd={updateNote}/>
         {list.map((noteItem, index) => {
-          return (
-            <Note
+          return(
+            <Note className = "note"
               key={index}
               id={index}
               title={noteItem.title}
